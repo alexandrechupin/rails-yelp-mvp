@@ -1,0 +1,15 @@
+
+<div class="container mt-4">
+
+  <h1>Restaurants#index</h1>
+
+  <ul> <% @restaurants.each do |element| %>
+      <li><%= link_to element.name, restaurant_path(element) %>
+          <%= element.address  %>
+          <%= element.category %></li>
+      <% end %>
+  </ul>
+
+  <%= link_to "New Restaurant", new_restaurant_path %>
+
+</div>
